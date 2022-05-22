@@ -1,0 +1,12 @@
+Welche Bilder sind zusätzlich zur Projektions-Serie enthalten und woher 
+kann man dies erfahren?
+Wie viele Projektionen sind aufgenommen worden und woher kann man dies 
+erfahren?
+221 Aus der Headerdatei der Bildreihe.
+3.3 Welches Winkelinkrement wurde verwendet und woher kann man dies 
+erfahren?
+Woran kann erkannt werden, dass die Maus lebte?
+An der bewegung des Zwerchfels.
+Warum kann 170529_mq_v1.hdr nicht direkt von Fiji/IJ geöffnet werden, 
+die
+170529_mq_v1.ct.img.hdr jedoch schon?

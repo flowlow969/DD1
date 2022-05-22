@@ -1,0 +1,23 @@
+Welche Funktionalitäten bietet Fiji für die Registrierung?
+Im folgenden beziehe ich mich auf das Plugin für Fiji bUnwarbJ
+1. 2D->2D,3D->3D,2D->3D,3D->2D?
+bUnwarbJ beherrscht lediglich eine Registrierung von 2D Bildern im 2D Raum.
+
+2. rein manuell, semi-automatisiert oder voll automatisiert?
+bUnwarbJ beherrscht alle der genanten Autimatisoerungs Level.
+
+3. nur Paarweise oder für Bildserien?
+bUnwarbJ kann sowohl für Bild Paare und Serien verwendet werden.
+
+4. nur gleiche Bildmodalitäten oder verschiedene möglich (z.B. CT zu MRT)? 
+Dies ist prinzpiel möglich mit bUnwarbJ allerdings muss eine gewisse Ähnlichkeit gegeben sein, außerdem funktioniert dies nur in 2D.
+
+5. Landmark oder Intensity basiert?
+	-bUnwarbJ funktionier Landmark basiert.
+	-elastix funktionierIntensity basier
+
+6. welche Transformationen werden unterstützt?
+bUnwarbJ unterstützt elastische Deformationen
+
+7. reproduzierbar anwendbar?
+bUnwarbJ ist eine konsistentes verfahren zur Bildregestrierung.

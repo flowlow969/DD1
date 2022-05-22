@@ -1,0 +1,38 @@
+Vorgehen Bild regestrierung:
+1. Git Repo pullen: 
+https://github.com/romangrothausmann/elastix_scripts/tree/master/tests/recRegStack
+2. In Ordner:test/recRegStack wechseln.
+3. Bilder mit "g8b.png" im Namen suchen.
+4. Diese Bilder in einem Seperaten Ordner Ablegen.
+5. Fiji öffnen.
+6. Regestrirung aufrufen: Plugins->Regestration->Register Virtual Stack 
+Slices.
+7. Dort den Ordner mit den zuvor kopierten Bildern für "Source directory" 
+auswahälen.
+8. Anschlisend einen neuen Ordner erstellen in dem die Regestrierte 
+Bildfolge 
+gespeichert wird (Achtung für jede regestrierte Bildfolge einnen neuen 
+Ordner anlegen).
+9. Diesen Ordner für das "Output directory" auswählen.
+10.Für das "Feature extraction model" Rigid auswählen.
+11.Für das "Registration model" ebenfals Regide auswählen.
+12.Mit Ok bestätigen (Berechnung kann ein wenig Dauern).
+13.Das erste Bild der Folge Auswählen.
+14.Den so entstanden Stack mit einem vermerk auf das "Registration model" 
+als .tif datei Speicher.
+15.Die Schritte 6. bis 14. wiederholen und dabei das "Registration model" 
+zu afin ändern.
+16.Um den Subtraktionsstack der beiden Stacks zu erhalten: Procces->Image 
+Calculator Aufrufen.
+17.Dort die beiden Stacks auswählen.
+18.Subtraction auswählen und das Häckchen für die 32bit Farbdarstellung 
+auswählen (anschliesend mit OK bestätigen und im nächsten Fenster mit 
+Yes bestätigen).
+19.Der so entstandene Subrtactionstack sollte nun in einem neuen Fenster 
+erscheinen, nun kann mit dem drücken der Taste D das Histogram aufgerufen 
+werden.
+20.Das Histogram sperichern
+21.Den Mittelwert aller Bilder im Stack bilden: Image->Stack->Projct Z 
+22.Darauf achten das alle Bilder angwählt sind und Average Intencty 
+ausgewählt ist.
+23.Das so enstanden Bild Speichern.

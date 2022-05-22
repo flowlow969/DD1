@@ -1,0 +1,4 @@
+Subtraction und Differnzsind sehr ähnliche Operationen sie entscheiden 
+sich lediglich darin das die differnz den Betrag der Subtraktion bildet. 
+Dabei werden negative werte in den Positiven berich 
+gewandelt.https://spineup.jimdofree.com/2013/10/04/image-calculator/ 
