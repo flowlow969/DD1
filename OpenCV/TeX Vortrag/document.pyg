@@ -1,0 +1,54 @@
+
+\section{Beispiele (Demo)}
+\begin{frame} \frametitle{Beispiele}
+	\textbf{Bild öffnen und anzeigen}\\
+	%\lstset {language=bash}
+	%%\begin{lstlisting}
+	%%pip3 install opencv-python
+	%%\end{lstlisting}
+	\cite{Howse2015}
+\end{frame}
+\begin{frame} \frametitle{Beispiele}
+	\textbf{Kanten erkenung}\\
+	%\lstset {language=bash}
+	%%\begin{lstlisting}
+	%%pip3 install opencv-python
+	%%\end{lstlisting}
+	\cite{Howse2015}
+\end{frame}
+
+\begin{frame} \frametitle{Beispiele}
+	\textbf{Gesichtserkennung}\\
+	%\lstset {language=bash}
+	%%\begin{lstlisting}
+	%%pip3 install opencv-python
+	%%\end{lstlisting}
+	\cite{Howse2015}
+\end{frame}
+\section[Quellen]{Referenzen}
+
+\begin{frame}\frametitle{Quellen \& Literatur}
+	\begin{thebibliography}{9}
+		\bibitem{GitHub}
+		GitHub: OpenCV
+		\\\texttt{Open Source Computer Vision Library}
+		\url{https://github.com/opencv/opencv}
+		[abgerufen am: 21.05.2022]
+		
+		\bibitem{OpenCV}
+		Website: OpenCV
+		\\texttt{Open Source Computer Vision Library}
+		\url{https://opencv.org}
+		[abgerufen am: 27.05.2022]
+		
+		\bibitem{Bradski2008}
+		Bradski, A. Learning OpenCV - Computer Vision with the OpenCV Library. (OReilly Media, Inc. ,2008)
+		
+		\bibitem{Howse2015}Howse OpenCV 3 Blueprints - . (Packt Publishing Ltd,2015)
+	\end{thebibliography}
+\end{frame}
+
+
+
+
+\end{document}

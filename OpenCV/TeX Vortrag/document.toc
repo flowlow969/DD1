@@ -1,5 +1,5 @@
 \beamer@sectionintoc {1}{Namensgebung \& Historie}{2}{0}{1}
-\beamer@sectionintoc {2}{Material und Größe}{7}{0}{2}
-\beamer@sectionintoc {3}{Simulation}{13}{0}{3}
-\beamer@sectionintoc {4}{Ergebnisse}{18}{0}{4}
-\beamer@sectionintoc {5}{Referenzen}{24}{0}{5}
+\beamer@sectionintoc {2}{Kompatibilität}{10}{0}{2}
+\beamer@sectionintoc {3}{Installation}{13}{0}{3}
+\beamer@sectionintoc {4}{Beispiele (Demo)}{15}{0}{4}
+\beamer@sectionintoc {5}{Referenzen}{19}{0}{5}

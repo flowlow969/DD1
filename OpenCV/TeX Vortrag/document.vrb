@@ -1,0 +1,20 @@
+\frametitle{Beispiele}
+	\textbf{Gesichtserkennung:}\\
+	\lstset{style=myStyle}
+	\begin{lstlisting}
+		import cv2 as cv
+		capture = cv.VideoCapture(0)
+		cascade = cv.CascadeClassifier("haarcascade_frontalface_default.xml")
+		while True:
+			_, im = capture.read()
+			im_gray = cv.cvtColor(im, cv.COLOR_BGR2GRAY)
+			face = cascade.detectMultiScale(im_gray)
+			for x, y, width, height in face:
+				cv.rectangle(im, (x, y), (x + width, y + height), color = (0,0,250), thickness = 5)
+			cv.imshow("Kamera", im)
+				if cv.waitKey(1) == ord("q"):
+				break
+		capture.release()
+		cv.destroyAllWindows()
+	\end{lstlisting}
+	\cite{Howse2015}

@@ -2,8 +2,38 @@
 
 \documentclass{beamer}
 
+
+% Code Including
 \usepackage{xcolor}
-\definecolor{blackl}{RGB}{12,14,18}
+\usepackage{setspace}
+\usepackage{color}
+\usepackage{listings}
+% Define a custom color
+\definecolor{backcolour}{rgb}{18,21,25}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{blackl}{RGB}{11,12,15}
+\definecolor{greyl}{RGB}{18,21,25}
+
+% Define a custom style
+\lstdefinestyle{myStyle}{
+	backgroundcolor=\color{greyl},   
+	commentstyle=\color{codegreen},
+	basicstyle=\ttfamily\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	keepspaces=true,                 
+	numbers=left,       
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2,
+}
+
+
+
+
+
 
 \usetheme{Warsaw} %Berkeley Goettingen Hannover Berlin
 \setbeamercolor{normal text}{fg=white,bg=blackl}
@@ -14,9 +44,9 @@
 \setbeamercolor{item projected}{use=item,fg=black,bg=item.fg!35}
 
 \setbeamercolor*{palette primary}{use=structure,fg=structure.fg}
-\setbeamercolor*{palette secondary}{use=structure,fg=structure.fg!95!black}
-\setbeamercolor*{palette tertiary}{use=structure,fg=structure.fg!90!black}
-\setbeamercolor*{palette quaternary}{use=structure,fg=structure.fg!95!black,bg=black!80}
+\setbeamercolor*{palette secondary}{use=structure,fg=greyl!95!blackl}
+\setbeamercolor*{palette tertiary}{use=structure,fg=greyl!90!blackl}
+\setbeamercolor*{palette quaternary}{use=structure,fg=structure.fg!95!black,bg=blackl!80}
 
 \setbeamercolor*{framesubtitle}{fg=white}
 
@@ -33,7 +63,9 @@
 \title{OpenCV}   
 \author{Florian Herrmann} 
 \date{\today}
-\logo{\includegraphics[scale=0.3]{Bilder/HAWK_Logo.jpg} \includegraphics[scale=0.15]{Bilder/OpenCV.png}}
+\logo{\includegraphics[scale=0.3]{Bilder/HAWK_Logo.jpg}
+	\includegraphics[scale=0.004]{Bilder/Blank.png}
+	 \includegraphics[scale=0.15]{Bilder/OpenCV.png}}
 
 \begin{frame}
 \titlepage
@@ -41,136 +73,253 @@
 
 \section{Namensgebung \& Historie}
 \begin{frame} \frametitle{Namensgebung}
-	$Open + Computer Visson = OpenCV$
-	
+	$Open + Computer Visson = OpenCV$ \pause
+	\begin{description}
+		\item Open:\\
+		 Open-Source-Software.\pause
+		\item Computer Visson:\\
+		 Verschiedene Formen der Detektoren, Filtern und Bildableitungen (+ ML).
+	\end{description}
+\cite{Bradski2008}
 \end{frame}
 
 \begin{frame} \frametitle{Historie}
 	\begin{itemize}
-		\item [2000]
-	
+		\item [2000] Initiation durch Intel (um mehr Prozessoren zu verkaufen). \pause
+		\item [2013] Die Willow Garage gibt an Itseez ab. \pause
+		\item [2016] Intel kauft Itseez 
 	\end{itemize}
-	\cite{GitHub}
+	\cite{Bradski2008}
 \end{frame}
 
-\begin{frame} \frametitle{Projektidee}
-	Programiert in C++ (Laufzeit optimiert)
+\begin{frame} \frametitle{Vor- \& Nachteile}
+\begin{columns}
+	\begin{column}{0.5\textwidth}
+		\textbf{Vorteile:}
+		\begin{itemize}
+			\item Auf allen Plattformen verfügbar.
+			\item Schnelle Berechnungen.
+			\item Weit verbreitet.
+			\item Freie Lizenz.
+			\item Sehr gut dokumentiert.
+			\item Kompatibel mit anderen Bibliotheken.
+		\end{itemize}
+	\end{column}
+	
+	
+	\begin{column}{0.5\textwidth}
+	\textbf{Nachteil:}
+	\begin{itemize}
+		\item Nicht ganz einfache Nutzung im Vergleich zu GUI Anwendungen.
+		\item Teilweise aufwendige Installation. 
+	\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame} \frametitle{Programmierung und Kompatibilität}
+	Programiert in C++ (Laufzeit Optimierung, paralleles berechnen).
 	\begin{figure}
 		\centering
-		\includegraphics[width=0.85\textwidth]{Bilder/CodeBase.png}
+		\includegraphics[width=0.8\textwidth]{Bilder/CodeBase.png}
 		\label{a4}
 	\end{figure}
+\cite{GitHub, Bradski2008}
 \end{frame}
 
-\begin{frame} \frametitle{Projektidee}
-	Zur Verwendung eines Schmidt-Cassegrain-Teleskop in  einem Kleinstsatelliten soll dieses in einer monolithischen Anordnung umgesetzt werden.\\
-	\textbf{Dies bietet folgen Vorteile:}\\
-	\begin{itemize}
-		\item  Durch die geringe  Wärmeausdehnung des Glases, ist ein solcher Aufbau weniger anfällig für thermische Ausdehnung. \pause
-		\item Der Aufbau ist resilient gegenüber  Schlägen und Vibration.
-	\end{itemize}
-\end{frame}
-
-\section{Material und Größe}
-\begin{frame}
-	\frametitle{Material und Größe}
-	Randbedingungen für den Aufbau:
+\section{Kompatibilität}
+\begin{frame} \frametitle{Programmierung und Kompatibilität}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+			\textbf{Dabei ist OpenCV kompatibel mit:}
+			\begin{itemize}
+				\item C
+				\item C++
+				\item Python
+				\item Java
+			\end{itemize}
+		\textbf{Und ist auf den folgenden Systemen verfügbar:}
 		\begin{itemize}
-		\item  Material: NBK7 von der Firma Schott \pause
-		\item Apertur: $\varnothing 30 ~mm$ \pause
-		\item Länge: $ 34 ~mm$ \pause
-		\item Wellenlängenbereich: $\lambda_1 = 486~nm $ bis $ \lambda_3=656 ~nm$ \pause
-		\item Maximales Gesamtgewicht des  Satelliten: $ 1.3 ~kg$ \pause
-		\item Maximales Kantenlänge des  Satelliten: $ 100 ~mm$ 
+			\item Windows
+			\item Mac
+			\item Linux
+			\item Embedded Systems
+		\end{itemize}
+	\end{column}
+
+
+	\begin{column}{0.5\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{Bilder/CodeBase.png}
+	\end{column}
+\end{columns}	
+\end{frame}
+
+\begin{frame} \frametitle{Maintainer}
+		\begin{itemize}
+\item OpenCV ist Opensource $\rightarrow$ Code liegt auf Github.\\
+\item Unterliegt der Apache Lizenz (kann von jedem genutzt werden)\\
+\item Regelmäßige Teilnahme am: Google Summer of Code $\rightarrow$ du kannst auch dabei sein.
 	\end{itemize}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\textwidth]{Bilder/maintainer.png}
+	\label{a5}
+\end{figure}
+\cite{GitHub, Bradski2008}
 \end{frame}
 
 
-\section{Simulation}
-
-\begin{frame}\frametitle{Simulation}
-	\textbf{Vorgehen:}
+\begin{frame} \frametitle{Funktionsumfang}
+\begin{columns}
+	\begin{column}{0.5\textwidth}
+	\textbf{Klassische Bildverarbeitung: }
 	\begin{itemize}
-		\item Eintragen der Apertur und der Wellenlängen. \pause
-		\item Eintragen der Flächen und deren Aperturen. \pause
-		%\item Überprüfen des Strahlengangs. \pause
-		\item Automatic Designer mit Randbedingungen \glqq füttern\grqq. \pause 
+		\item  2 und 3D Merkmallsextraktion.
+		\item Klassische Filter.
+		\item Gesichts und Gesten erkennen.
+		\item Mensch Maschine Interaktion.
+		\item Segmentierung.
+		\item Klassifizierung.
+		\item Steriskopisches Sehen.
+		\item Kalman-Filter.
 	\end{itemize}
-
-\end{frame}
-
-\begin{frame}\frametitle{Simulation}
-\textbf{Vorgehen:}
+\end{column}
+\begin{column}{0.5\textwidth}
+	\textbf{Maschinelles Lernen:}
 	\begin{itemize}
-		\item Eintragen der Apertur und der Wellenlängen. 
-		\item Eintragen der Flächen und deren Aperturen. 
-		%\item Überprüfen des Strahlengangs. \pause
-		\item Automatic Designer mit Randbedingungen \glqq füttern \grqq. 
+		\item NNK Nächster Nachbar Klassifikation.
+		\item Deep Learning.
 	\end{itemize}
-
+\textbf{Tools zur verbesserten Nutzung:}
+\begin{itemize}
+	\item GUI zur leichteren Ausgabe von Bildern.
+\end{itemize}
+	\end{column}
+\end{columns}	
+	\cite{Bradski2008}
 \end{frame}
 
+\section{Installation}
+\begin{frame} \frametitle{Hardware Voraussetzungen}
+	\textbf{Anforderungen: }
+	\begin{itemize}
+		\item  min. 4 GB RAM.
+		\item Festplattenspeicherbedarf vernachlässigbar klein.  
+		\item Hardware Beschleunigung nur mit NVDIA GPU möglich(CUDA).
+	\end{itemize}
+\end{frame}
 
+\begin{frame} [fragile]
+\frametitle{Instalation}
+	\textbf{Möglichkeit 1: Selbst kompilieren}\\
+	Aufwändig und Vollständig.
+		\begin{itemize}
+			\item  [1.] git clone https://github.com/opencv/opencv
+			\item [2.] cmake opencv
+		\end{itemize}
+	\textbf{Möglichkeit 2: Installation über eine Pipeline}\\
+	Einfach und möglicherweise nicht ganz aktuell.\\
+\lstset{style=myStyle}
+\begin{lstlisting}
+		pip3 install opencv-python 
+\end{lstlisting}
+\cite{Howse2015}
+\end{frame}
 
+\section{Beispiele (Demo)}
+\begin{frame} [fragile]
+\frametitle{Beispiele}
+	\textbf{Bild öffnen und anzeigen}\\
+\lstset{style=myStyle}
+	\begin{lstlisting}
+	import cv2   as cv								#Lade OpenCV
+	
+	filename = "example.png". 				#Pfad zum Bild 
+	image = cv.imread(filename,0)  		#Bild Laden
+	if image is None:               
+		print("Unable to open " + filename)
+		exit(-1)
 
-\section{Ergebnisse}
+	cv.imshow("An example image", image)    #Bild anzeigen
+	cv.waitKey(0)
+	cv.destroyAllWindows()
+	\end{lstlisting}
+	\cite{Howse2015}
+\end{frame}
+
+\begin{frame} [fragile]
+\frametitle{Beispiele}
+	\textbf{Kanten Erkennung:}\\
+	\lstset{style=myStyle}
+	\begin{lstlisting}
+		import cv2 as cv
+		import numpy as np
+		
+		image = cv.imread('imge.png',0)
+		
+		height, width = image.shape
+		
+		canny = cv.Canny(image, 50, 120)
+		cv.imshow('Canny', canny)
+		
+		cv.destroyAllWindows()
+	\end{lstlisting}
+	\cite{Howse2015}
+\end{frame}
+
+\begin{frame} [fragile]
+	\frametitle{Beispiele}
+	\textbf{Gesichtserkennung:}\\
+	\lstset{style=myStyle}
+	\begin{lstlisting}
+		import cv2 as cv
+		capture = cv.VideoCapture(0)
+		cascade = cv.CascadeClassifier("haarcascade_frontalface_default.xml")
+		while True:
+			_, im = capture.read()
+			im_gray = cv.cvtColor(im, cv.COLOR_BGR2GRAY)
+			face = cascade.detectMultiScale(im_gray)
+			for x, y, width, height in face:
+				cv.rectangle(im, (x, y), (x + width, y + height), color = (0,0,250), thickness = 5)
+			cv.imshow("Kamera", im)
+				if cv.waitKey(1) == ord("q"):
+				break
+		capture.release()
+		cv.destroyAllWindows()
+	\end{lstlisting}
+	\cite{Howse2015}
+\end{frame}
+
 \begin{frame}
-	\frametitle{Ergebnisse}
-
- \begin{itemize}
- 	\item Auflösungsvermögen: $230 ~\frac{Linienpaare}{mm}  \approx 2,17~\mu m$\pause
- 	\item RMS-Radius:  $0,003118~mm$ \pause
- 	\item Vergrößerung: $V=3,14 $  \pause
- 	\item Auflösung: $A=(4,54\pm0,7)~m$\pause
- 	\item Gewicht: $m = 151.4~g$ \pause
- 	\item Länge: $l =  62 ~mm$
- 	 
- \end{itemize}
+	\centering \Large
+	\emph{Danke für eure Zeit!}
 \end{frame}
-
-
 
 \section[Quellen]{Referenzen}
-\begin{frame}\frametitle{Quellen \& Literatur}
 
+\begin{frame}\frametitle{Quellen \& Literatur}
 	\begin{thebibliography}{9}
-		
 		\bibitem{GitHub} 
 		GitHub: OpenCV
 		\\\texttt{Open Source Computer Vision Library}
 		\url{https://github.com/opencv/opencv}
 		[abgerufen am: 21.05.2022]
 		
+		\bibitem{OpenCV} 
+		Website: OpenCV
+		\\texttt{Open Source Computer Vision Library}
+		\url{https://opencv.org}
+		[abgerufen am: 27.05.2022]
+		
 		\bibitem{Bradski2008}
 		Bradski, A. Learning OpenCV - Computer Vision with the OpenCV Library. (OReilly Media, Inc. ,2008)
 		
-		
-		
-		
-		
+		\bibitem{Howse2015}Howse OpenCV 3 Blueprints - . (Packt Publishing Ltd,2015)
 	\end{thebibliography}
-
 \end{frame}
 
 
-\begin{frame}
-	\frametitle{Ergebnisse}
-	
 
-\begin{minipage}{0.45\textwidth}
-		\begin{equation}
-			1,22\cdot\dfrac{\lambda}{d}=\theta_{min}~(rad)	
-		\label{f2}
-	\end{equation}
-\end{minipage}
-\begin{minipage}{0.1\textwidth}
-\end{minipage}
-\begin{minipage}{0.45\textwidth}
-	\begin{equation}
-	A=2\cdot\sin\left(\frac{\theta_{min}}{2}\right)\cdot h	~~.
-	\label{f3}
-	\end{equation}
-\end{minipage}
-\end{frame}
 
 \end{document}
