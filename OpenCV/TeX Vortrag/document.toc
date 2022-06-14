@@ -1,5 +1,7 @@
 \beamer@sectionintoc {1}{Namensgebung \& Historie}{2}{0}{1}
-\beamer@sectionintoc {2}{Kompatibilität}{10}{0}{2}
-\beamer@sectionintoc {3}{Installation}{13}{0}{3}
-\beamer@sectionintoc {4}{Beispiele (Demo)}{15}{0}{4}
-\beamer@sectionintoc {5}{Referenzen}{19}{0}{5}
+\beamer@sectionintoc {2}{Funktionen}{4}{0}{2}
+\beamer@sectionintoc {3}{Kompatibilität}{7}{0}{3}
+\beamer@sectionintoc {4}{Installation}{8}{0}{4}
+\beamer@sectionintoc {5}{Vor-,Nachteile}{10}{0}{5}
+\beamer@sectionintoc {6}{Beispiele (Demo)}{11}{0}{6}
+\beamer@sectionintoc {7}{Referenzen}{15}{0}{7}

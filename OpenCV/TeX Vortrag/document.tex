@@ -73,10 +73,10 @@
 
 \section{Namensgebung \& Historie}
 \begin{frame} \frametitle{Namensgebung}
-	$Open + Computer Visson = OpenCV$ \pause
+	$Open + Computer Visson = OpenCV$ 
 	\begin{description}
 		\item Open:\\
-		 Open-Source-Software.\pause
+		 Open-Source-Software.
 		\item Computer Visson:\\
 		 Verschiedene Formen der Detektoren, Filtern und Bildableitungen (+ ML).
 	\end{description}
@@ -85,37 +85,60 @@
 
 \begin{frame} \frametitle{Historie}
 	\begin{itemize}
-		\item [2000] Initiation durch Intel (um mehr Prozessoren zu verkaufen). \pause
-		\item [2013] Die Willow Garage gibt an Itseez ab. \pause
+		\item [2000] Initiation durch Intel (um mehr Prozessoren zu verkaufen). 
+		\item [2013] Die Willow Garage gibt an Itseez ab. 
 		\item [2016] Intel kauft Itseez 
 	\end{itemize}
 	\cite{Bradski2008}
 \end{frame}
-
-\begin{frame} \frametitle{Vor- \& Nachteile}
-\begin{columns}
-	\begin{column}{0.5\textwidth}
-		\textbf{Vorteile:}
-		\begin{itemize}
-			\item Auf allen Plattformen verfügbar
-			\item Schnelle Berechnungen
-			\item Weit verbreitet
-			\item Freie Lizenz
-			\item Sehr gut dokumentiert
-			\item Kompatibel mit anderen Bibliotheken
-		\end{itemize}
-	\end{column}
-	
-	
-	\begin{column}{0.5\textwidth}
-	\textbf{Nachteil:}
-	\begin{itemize}
-		\item Nicht ganz einfache Nutzung im Vergleich zu GUI Anwendungen
-		\item Teilweise aufwendige Installation
-	\end{itemize}
-\end{column}
-\end{columns}
+\section{Funktionen}
+\begin{frame} \frametitle{Funktionsumfang}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\textbf{Klassische Bildverarbeitung: }
+			\begin{itemize}
+				\item  2 und 3D Merkmallsextraktion.
+				\item Klassische Filter.
+				\item Gesichts und Gesten erkennen.
+				\item Mensch Maschine Interaktion.
+				\item Segmentierung.
+				\item Klassifizierung.
+				\item Steriskopisches Sehen.
+				\item Kalman-Filter.
+			\end{itemize}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\textbf{Maschinelles Lernen:}
+			\begin{itemize}
+				\item NNK Nächster Nachbar Klassifikation.
+				\item Deep Learning.
+			\end{itemize}
+			\textbf{Tools zur verbesserten Nutzung:}
+			\begin{itemize}
+				\item GUI zur leichteren Ausgabe von Bildern.
+			\end{itemize}
+		\end{column}
+	\end{columns}	
+	\cite{Bradski2008}
 \end{frame}
+
+\begin{frame} \frametitle{Maintainer}
+	\begin{itemize}
+		\item OpenCV ist Opensource $\rightarrow$ Code liegt auf Github.
+		\item Unterliegt der Apache Lizenz.
+		\item Jeder Kann mit  Pull/Merge-Requests mitarbeiten.
+		\item Regelmäßige Teilnahme am: Google Summer of Code
+		\item Finaziert durch Crowdfunding
+	\end{itemize}
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.5\textwidth]{Bilder/maintainer.png}
+		\label{a5}
+	\end{figure}
+	\cite{GitHub, Bradski2008}
+\end{frame}
+
+
 
 \begin{frame} \frametitle{Programmierung und Kompatibilität}
 	Programiert in C++ (Laufzeit Optimierung, paralleles berechnen).
@@ -155,50 +178,9 @@
 \end{columns}	
 \end{frame}
 
-\begin{frame} \frametitle{Maintainer}
-		\begin{itemize}
-\item OpenCV ist Opensource $\rightarrow$ Code liegt auf Github.\\
-\item Unterliegt der Apache Lizenz (kann von jedem genutzt werden)\\
-\item Regelmäßige Teilnahme am: Google Summer of Code $\rightarrow$ du kannst auch dabei sein.
-	\end{itemize}
-\begin{figure}
-	\centering
-	\includegraphics[width=0.5\textwidth]{Bilder/maintainer.png}
-	\label{a5}
-\end{figure}
-\cite{GitHub, Bradski2008}
-\end{frame}
 
 
-\begin{frame} \frametitle{Funktionsumfang}
-\begin{columns}
-	\begin{column}{0.5\textwidth}
-	\textbf{Klassische Bildverarbeitung: }
-	\begin{itemize}
-		\item  2 und 3D Merkmallsextraktion.
-		\item Klassische Filter.
-		\item Gesichts und Gesten erkennen.
-		\item Mensch Maschine Interaktion.
-		\item Segmentierung.
-		\item Klassifizierung.
-		\item Steriskopisches Sehen.
-		\item Kalman-Filter.
-	\end{itemize}
-\end{column}
-\begin{column}{0.5\textwidth}
-	\textbf{Maschinelles Lernen:}
-	\begin{itemize}
-		\item NNK Nächster Nachbar Klassifikation.
-		\item Deep Learning.
-	\end{itemize}
-\textbf{Tools zur verbesserten Nutzung:}
-\begin{itemize}
-	\item GUI zur leichteren Ausgabe von Bildern.
-\end{itemize}
-	\end{column}
-\end{columns}	
-	\cite{Bradski2008}
-\end{frame}
+
 
 \section{Installation}
 \begin{frame} \frametitle{Hardware Voraussetzungen}
@@ -225,6 +207,31 @@
 		pip3 install opencv-python 
 \end{lstlisting}
 \cite{Howse2015}
+\end{frame}
+\section{Vor-,Nachteile}
+\begin{frame} \frametitle{Vor- \& Nachteile}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\textbf{Vorteile:}
+			\begin{itemize}
+				\item Auf allen Plattformen verfügbar
+				\item Schnelle Berechnungen
+				\item Weit verbreitet
+				\item Freie Lizenz
+				\item Sehr gut dokumentiert
+				\item Kompatibel mit anderen Bibliotheken
+			\end{itemize}
+		\end{column}
+		
+		
+		\begin{column}{0.5\textwidth}
+			\textbf{Nachteil:}
+			\begin{itemize}
+				\item Nicht ganz einfache Nutzung im Vergleich zu GUI Anwendungen
+				\item Teilweise aufwendige Installation
+			\end{itemize}
+		\end{column}
+	\end{columns}
 \end{frame}
 
 \section{Beispiele (Demo)}
