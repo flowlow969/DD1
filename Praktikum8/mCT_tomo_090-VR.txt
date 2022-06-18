@@ -1,0 +1,7 @@
+How2Projektion aus 90 grad mit ParaView
+1. Bild öffnen
+2. Bild über betätigen das apply buttons lade
+3. Bild in die Ansicht aus der -Y achse Rotieren
+4. Falschfarben in X-Ray anwenden
+5. intensität anpassen so das nahezu nur Knöchernde Struktuen zu sehen 
+sind
