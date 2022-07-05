@@ -1,0 +1,8 @@
+ObjectType = Image
+NDims = 3
+BinaryData = True
+BinaryDataByteOrderMSB = True
+DimSize = 256 256 30
+ElementSize = 1.0 1.0 1.0
+ElementType = MET_UCHAR
+ElementDataFile = BMM170529_BMM0529_01_BMM0529__E4_P1.raw

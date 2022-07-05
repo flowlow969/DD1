@@ -1,0 +1,7 @@
+black[jupyter]
+pytest
+markdown
+lxml
+pyenchant
+ipython
+-rPython/requirements.txt
